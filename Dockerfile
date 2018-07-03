@@ -31,7 +31,7 @@ RUN apt-get update -yqq && \
         python-pip && \
     pecl install ssh2-1.0 memcached && \
     echo extension=memcached.so >> /usr/local/etc/php/conf.d/memcached.ini && \
-    docker-php-ext-install mbstring pdo_pgsql curl json intl gd xml zip bz2 opcache pdo pdo_mysql && \
+    docker-php-ext-install mbstring pdo_pgsql curl json intl gd xml zip bz2 opcache pdo pdo_mysql soap && \
     curl -sS https://bootstrap.pypa.io/get-pip.py | python
 
 RUN apt-get update && apt-get install -my gnupg wget && \
