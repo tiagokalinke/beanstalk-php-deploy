@@ -2,6 +2,7 @@ FROM php:cli
 
 RUN apt-get update -yqq && \
     apt-get install -yqq \
+        zip \
         git \
         libmcrypt-dev \
         libpq-dev \
